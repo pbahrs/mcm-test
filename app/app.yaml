@@ -1,0 +1,21 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: test-app
+  namespace: mmb-test
+  resourceVersion: $app_version
+  annotations:
+  labels:
+    app: test-app 
+    name: test-app
+    release: $app_version
+spec:
+  componentKinds:
+  - group:
+    kind:
+  descriptor:
+  selector:
+    matchExpressions:
+    - key:
+      operator:
+      values:
